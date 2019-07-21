@@ -13,17 +13,44 @@
     <title>MWCC</title>
   </head>
   <body>
+
+    <!-- Facebook related -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '332201364395175',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v3.3'
+        });
+
+        FB.AppEvents.logPageView();
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3&appId=332201364395175&autoLogAppEvents=1"></script>
+
+    <!-- Code -->
     <div class="container-fluid px-0 bg">
       <div class="container">
         <div class="row">
-          <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">MWCC</a>
-          </nav>
+          <h1>MAJDALANI WORLD CUP COMPETITION</h1>
         </div>
       </div>
 
       <div class="overlay">
-          <button type="button" class="btn btn-lg btn-warning">Get started!</button>
+        <div class="overlayContent">
+          <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+        </div>
       </div>
     </div>
     <!-- Optional JavaScript -->
