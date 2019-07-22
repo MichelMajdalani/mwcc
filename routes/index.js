@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-// Root routes
+// ROOT ROUTE
 router.get("/", (req, res) => {
   res.render("landing");
 });
