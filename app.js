@@ -3,11 +3,9 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require('method-override');
-var passport = require("passport");
-var FacebookStrategy = require('passport-facebook').Strategy;
 
 // IMPORT MODELS
-var Competition = require("./models/competitions");
+var Competitions = require("./models/competitions");
 
 // IMPORT ROUTES
 var competitionRoutes = require("./routes/competitions");
