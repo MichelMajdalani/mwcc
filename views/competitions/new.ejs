@@ -1,5 +1,97 @@
 <% include ../partials/header.ejs %>
 
+<div class="container">
+	<div class="text-center my-5">
+		<h2 class="display-4">New competition form</h2>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacinia, metus id volutpat fermentum, lectus eros posuere purus, non finibus.</p>
+	</div>
+	<form action="/competitions" method="POST">
+		<div class="form-group row">
+			<label for="name" class="col-sm-2 col-form-label">Competition Name</label>
+			<div class="col-sm-10">
+			  <input type="text" class="form-control" name="name" placeholder="name" id="name" required/>
+			</div>
+	  	</div>
+		<div class="form-group row">
+			<label for="url" class="col-sm-2 col-form-label">Facebook Group url</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" name="url" placeholder="url" id="url" required/>
+			</div>
+	  	</div>
+		<p class="mt-4">Group Phase</p>
+		<div class="form-group row ml-3">
+			<label for="correctOutcome" class="col-sm-6 col-form-label">Guessing the correct outcome (winning team or guessing a draw)</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[correctOutcome]" id="correctOutcome" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="GScorrectScore" class="col-sm-6 col-form-label">Guessing the correct score</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[GScorrectScore]" id="GScorrectScore" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="teamRank" class="col-sm-6 col-form-label">Guessing the team rank in the group</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[teamRank]" id="teamRank" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="allTeamRank" class="col-sm-6 col-form-label">Guessing all 4 teams ranked in the correct order</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[allTeamRank]" id="allTeamRank" required/>
+			</div>
+	  	</div>
+		<p>Knockout Phase</p>
+		<div class="form-group row ml-3">
+			<label for="KOcorrectscore" class="col-sm-6 col-form-label">Guessing the correct score (only if the match ends within 90 mins)</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[KOcorrectscore]" id="KOcorrectscore" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="RO16winningteam" class="col-sm-6 col-form-label">Guessing the winning team for a round of 16 game</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[RO16winningteam]" id="RO16winningteam" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="QFwinningteam" class="col-sm-6 col-form-label">Guessing the winning team for a quarter final game</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[QFwinningteam]" id="QFwinningteam" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="SFwinningteam" class="col-sm-6 col-form-label">Guessing the winning team for a semi final game</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[SFwinningteam]" id="SFwinningteam" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="third" class="col-sm-6 col-form-label">Guessing the winning team for the play-off for third place game</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[third]" id="third" required/>
+			</div>
+	  	</div>
+		<div class="form-group row ml-3">
+			<label for="champion" class="col-sm-6 col-form-label">Guessing the World Cup champion</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="points[champion]" id="champion" required/>
+			</div>
+	  	</div>
+		<p>Bonus Questions</p>
+		<div class="form-group row ml-3">
+			<label for="questions" class="col-sm-6 col-form-label">Guessing the correct answer (per question)</label>
+			<div class="col-sm-3 my-auto">
+			  <input type="number" step="1" min="0" class="form-control" name="questions" id="questions" required/>
+			</div>
+	  	</div>
+		
+		<button type="submit" class="btn btn-primary my-4">Submit</button>
+	</form>
 
+	
+</div>
 
 <% include ../partials/footer.ejs %>

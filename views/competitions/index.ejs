@@ -9,86 +9,31 @@
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Competition 1</h5>
-          <p class="card-text mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum repellat nesciunt ipsum maiores voluptatum libero, suscipit tempora beatae consequuntur.</p>
-          <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
-          <a href="#" class="btn btn-xs btn-outline-success">View</a>
-          <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
-          <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Competition 2</h5>
-          <p class="card-text mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum repellat nesciunt ipsum maiores voluptatum libero, suscipit tempora beatae consequuntur.</p>
-          <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
-          <a href="#" class="btn btn-xs btn-outline-success">View</a>
-          <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
-          <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Competition 3</h5>
-          <p class="card-text mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum repellat nesciunt ipsum maiores voluptatum libero, suscipit tempora beatae consequuntur.</p>
-          <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
-          <a href="#" class="btn btn-xs btn-outline-success">View</a>
-          <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
-          <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Competition 4</h5>
-          <p class="card-text mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum repellat nesciunt ipsum maiores voluptatum libero, suscipit tempora beatae consequuntur.</p>
-          <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
-          <a href="#" class="btn btn-xs btn-outline-success">View</a>
-          <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
-          <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Competition 5</h5>
-          <p class="card-text mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum repellat nesciunt ipsum maiores voluptatum libero, suscipit tempora beatae consequuntur.</p>
-          <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
-          <a href="#" class="btn btn-xs btn-outline-success">View</a>
-          <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
-          <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Competition 6</h5>
-          <p class="card-text mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia harum repellat nesciunt ipsum maiores voluptatum libero, suscipit tempora beatae consequuntur.</p>
-          <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
-          <a href="#" class="btn btn-xs btn-outline-success">View</a>
-          <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
-          <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
+	<div class="row d-flex justify-content-end mb-4">
+		<a href="/competitions/new" class="btn btn-xs btn-success"><i class="fas fa-plus-circle"></i>  Create new competition</a>
+	</div>
 </div>
 
-
-<h4 class="text-center">I still have to fix the login with facebook</h4>
+<div class="container">
+  <div class="row">
+  	<% competitions.forEach(function(competition) {  %>
+	<div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= competition.name %></h5>
+          <p class="card-text mt-3">To join the Facebook group click here. <%= competition.GroupUrl %></p>
+        	<div class="d-flex justify-content-between">
+			 <a href="#" class="btn btn-xs btn-outline-primary">Join</a>
+			 <a href="#" class="btn btn-xs btn-outline-success">View</a>
+			 <a href="#" class="btn btn-xs btn-outline-warning">Edit</a>
+			 <a href="#" class="btn btn-xs btn-outline-danger">Delete</a>
+			</div>	
+        </div>
+      </div>
+    </div>
+	<% }); %>
+  </div>
+</div>
 
 
 <% include ../partials/footer.ejs %>
