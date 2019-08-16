@@ -9,6 +9,7 @@ var Competitions = require("./models/competitions");
 
 // IMPORT ROUTES
 var competitionRoutes = require("./routes/competitions");
+var formRoutes = require("./routes/form");
 var indexRoutes = require("./routes/index");
 
 // DATABASE
@@ -30,6 +31,7 @@ app.use(methodOverride("_method"));
 // ROUTES
 app.use("/", indexRoutes);
 app.use("/competitions", competitionRoutes);
+app.use("/competitions/:competition_id/form", formRoutes);
 
 // SERVER
 var port = process.env.PORT || 3000;
